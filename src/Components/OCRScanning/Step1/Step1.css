@@ -1,0 +1,152 @@
+.OCRScanning-container{
+  border: 1.5px solid lightgray;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 100px;
+}
+
+.Processed-Doc{
+  display: flex;
+  width: 50%;
+  justify-content: end;
+}
+
+.steps-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.doc-count{
+  background-color: #2F2F93;
+  color: white;
+  padding: 2px 30px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+
+.OCRScanning-container .steps span {
+  color: indigo;
+}
+.OCRScanning-container .steps .active {
+  border: none;
+  border-bottom: 2px solid indigo;
+  padding-bottom: 2px;
+}
+
+.OCRScanning-container .steps {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  /* margin-bottom: 20px; */
+}
+
+.OCRScanning-container .upload-container,
+.fileupload {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 0px 40px 0px;
+  border: 1.5px solid lightgray;
+  border-radius: 5px;
+  margin: auto;
+}
+.OCRScanning-container .upload-container {
+  width: 100%;
+}
+
+.OCRScanning-container .upload-container span {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.OCRScanning-container .upload-container button {
+  background-color: #42a5f5;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.OCRScanning-container .upload-container .image {
+  height: 150px;
+  width: 120px;
+  border: 1.5px solid black;
+}
+
+.OCRScanning-container .upload-container .delete-icon {
+    position: absolute;
+    top: 0;
+    right:-20px;
+    height: 20px;
+    width: 20px;
+    background-color: crimson;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .OCRScanning-container .uploaded-iamges .image-cover{
+      position: relative;
+  }
+
+.OCRScanning-container .uploaded-iamges {
+  display: flex;
+  gap: 80px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: center;
+}
+
+.OCRScanning-container .file-description {
+  color: gray;
+  margin-top: 10px;
+}
+
+.OCRScanning-container .next-btn{
+    width: 100%;
+    text-align: end;
+    margin-right: 5%;
+    margin-top: 30px;
+}
+
+.OCRScanning-container .next-btn button{
+  border-radius: 2px;
+  height: 30px;
+}
+
+.OCRScanning-container .recent-uploaded-container .title{
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px 0px 10px 20px;
+    height: 30px;
+}
+
+.OCRScanning-container .accordian-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    width: 92%;
+}
+
+.OCRScanning-container .accordian-container .MuiAccordionSummary-root{
+background-color: #F7F7F7  !important;
+}
+
+.OCRScanning-container .recent-uploaded-container{
+
+    border: 1.5px solid lightgray;
+    border-radius: 5px;
+    margin-top: 30px;
+    }
+
+    .OCRScanning-container .accordian{
+        display: flex;
+        justify-content: center;
+    }
