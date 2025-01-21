@@ -1,0 +1,130 @@
+/* Login.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .login-title {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .login-form {
+    text-align: left;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+  
+  .required {
+    color: red;
+  }
+  
+  input[type="text"],input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  /* input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  } */
+  .password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .password-container input {
+    flex: 1;
+  }
+  
+  .password-toggle {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .password-toggle:focus {
+    outline: none;
+  }
+  
+  .forgot-password {
+    display: block;
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 5px;
+    text-align: right;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .login-button {
+    width: 100%;
+    max-width: 130px; /* Optional: Set a maximum width for the button */
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto; /* Centers the button */
+    display: block; /* Ensures it's treated as a block element */
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .register-text {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #000;
+  }
+  
+  .register-text a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-text a:hover {
+    text-decoration: underline;
+  }
+  

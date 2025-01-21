@@ -30,8 +30,12 @@
   color: #888;
 } */
 
+.header{
 
-.zninth-app{
-  width: 1000px;
-  margin: auto;
+  width: 800px;
+}
+.app{
+  align-content: center;
+  width: 500px;
+margin-top: 20px;
 }
