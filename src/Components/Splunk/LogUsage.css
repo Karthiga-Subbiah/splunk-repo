@@ -1,0 +1,131 @@
+.log-usage-container {
+  max-width: 1200px;
+  margin: 0px auto;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-start;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.controls { 
+ 
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  margin-left: 300px;
+  margin-bottom: 20px;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.controls span {
+  margin-left: 5px;
+  margin-right: 5px;
+  /* font-weight: bold; */
+}
+
+.date-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.apply-button,
+.reset-button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.apply-button {
+  border: 1px solid gray;
+  background-color: #007bff;
+  color: white;
+}
+.date-calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.date-picker-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #fff;
+  width: 250px;
+}
+
+.calendar-icon {
+  font-size: 20px;
+  color: #333;
+  margin-right: 8px;
+}
+
+.date-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.reset-button {
+  border: 1px solid gray;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.log-usage-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.log-usage-table th,
+.log-usage-table td {
+  border-radius: 10px;
+  border: 2px solid darkgray;
+  padding: 10px;
+  text-align: center;
+}
+
+.log-usage-table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.log-usage-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.log-usage-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 15px;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
