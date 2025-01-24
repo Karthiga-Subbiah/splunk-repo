@@ -3,7 +3,7 @@ import { Tooltip } from "antd";
 import { useState, useRef,useEffect } from 'react'
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
+import { useNavigate } from "react-router-dom";
 function Splunk() {
 
   const [logInput, setLogInput] = useState("");
@@ -11,7 +11,7 @@ function Splunk() {
   const [history, setHistory] = useState([]);
   const textareaRef = useRef(null); 
   const [inputText, setInputText] = useState('');
-
+ const navigate = useNavigate();
   const generateLineNumbers = () => {
     const lines = inputText.split('\n');
     return lines.map((_, index) => index + 1).join('\n');
@@ -36,7 +36,7 @@ function Splunk() {
           alt="Bits10 Logo"
           style={{ height: "50px" }}
         /> */}
-        <span>Bits10</span>
+        <span>Z-NINTH</span>
         <nav style={{ display: "flex", gap: "50px" }}>
           <a href="#" style={{ textDecoration: "none", color: "#333" }}>
             Resources
@@ -50,6 +50,7 @@ function Splunk() {
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            onClick={() => navigate("/")}
           >
             <g id="style=fill">
               <g id="profile">
@@ -79,7 +80,16 @@ function Splunk() {
           padding: "20px",
         }}
       >
-        <h2 style={{ marginBottom: "20px" }}>Splunk Workspace</h2>
+        <div
+          style={{
+            display: "flex",
+           gap: "700px",
+            fontSize:"20px",
+          }}
+        >
+        <h2 style={{ marginBottom: "20px" }}>Logs Workspace</h2>
+        <a href="/logusage">Logs Usage Details</a>
+        </div>
         <div
           style={{
             display: "flex",

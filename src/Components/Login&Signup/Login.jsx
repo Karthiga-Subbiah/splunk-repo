@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import './Login.css';
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
-
+  const navigate = useNavigate();
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
@@ -44,9 +45,13 @@ const Login = () => {
           </div>
           <a href="/password" className="forgot-password">Forgot password?</a>
         </div>
-        <button type="submit" className="login-button">
-          Login
-        </button>
+        <button
+      type="button"
+      className="login-button"
+      onClick={() => navigate("/splunk")}
+    >
+      Login
+    </button>
       </form>
       <p className="register-text">
         Not register yet? <a href="/signup">Create Account</a>

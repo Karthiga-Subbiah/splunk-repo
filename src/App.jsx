@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom'
 import Signup from './Components/Login&Signup/Signup.jsx'
 import ForgotPassword from './Components/Password/ForgotPassword.jsx';
 import ResetPassword from './Components/Password/ResetPassword.jsx';
-import Header from "./Components/Header/Header.jsx";
+// import Header from "./Components/Header/Header.jsx";
 import LogUsage from "./Components/Splunk/LogUsage.jsx";
 import Splunk from "./Components/Splunk/Splunk.jsx"; 
 import 'antd/dist/reset.css'; 
@@ -19,11 +19,11 @@ function App() {
 
   return (
     <div className='app'>
-      {!noHeaderRoutes.includes(location.pathname) && (
+      {/* {!noHeaderRoutes.includes(location.pathname) && (
         <div className='header'>
           <Header />
         </div>
-      )}
+      )} */}
      
      <Routes>
      <Route path="/" element={<Login />} />

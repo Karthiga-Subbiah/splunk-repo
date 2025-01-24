@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Signup.css";
-
+import { useNavigate } from "react-router-dom";
 const Signup = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
@@ -8,7 +8,7 @@ const Signup = () => {
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
-
+  const navigate = useNavigate();
   const toggleConfirmPasswordVisibility = () => {
     setConfirmPasswordVisible(!confirmPasswordVisible);
   };
@@ -88,9 +88,14 @@ const Signup = () => {
             <input type="checkbox" id="termsCheckbox" name="termsAccepted"/>
             By signing up, you agree to our <a href="">Terms and Conditions</a>.
           </label>
-        <button type="submit" className="signup-button">
-          GET STARTED
-        </button>
+          <button
+      type="submit"
+      className="signup-button"
+      onClick={() => navigate("/")}
+    >
+      GET STARTED
+    </button>
+        
         <div className="login-link">
           Already have an account? <a href="/">Login</a>
         </div>
