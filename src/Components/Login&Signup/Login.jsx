@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
@@ -8,6 +8,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
@@ -15,25 +16,38 @@ const Login = () => {
   };
 
   const handleLogin = async (e) => {
-    e.preventDefault(); 
-    setLoading(true);
-    setError("");
-
+    e.preventDefault();
+    setError(null); // Reset error message
+    setLoading(true); // Show loading state
+  
     try {
       const response = await axios.post("http://35.154.179.226:81/login/", {
         email,
         password,
       });
-
-      console.log("Login Successful:", response.data);
-      alert("Login successful!");
-
-      localStorage.setItem("token", response.data.token);
-      navigate("/splunk");
+  
+      // Check if the response contains expected data
+      if (response.status === 200 && response.data.access_token) {
+        console.log("Login Successful:", response.data);
+  
+        // Store the tokens in localStorage
+        localStorage.setItem("access_token", response.data.access_token);
+        localStorage.setItem("refresh_token", response.data.refresh_token);
+  
+        alert("Login successful!");
+        navigate("/splunk"); // Navigate to the dashboard
+      } else {
+        // Unexpected structure in response
+        setError("Unexpected response from the server.");
+      }
     } catch (err) {
-      console.error("Login Error:", err);
-      setError(err.response?.data?.message || "An error occurred. Please try again.");
-    } 
+      console.error("Error Details:", err); // Debugging error details
+      setError(
+        err.response?.data?.message || "An error occurred. Please try again."
+      );
+    } finally {
+      setLoading(false); // Remove loading state
+    }
   };
 
   return (
@@ -74,17 +88,17 @@ const Login = () => {
               {passwordVisible ? "👁" : "👁"}
             </button>
           </div>
-          <a href="/password" className="forgot-password">
+          <a href="/resetpassword" className="forgot-password">
             Forgot password?
           </a>
         </div>
         {error && <p className="error-text">{error}</p>}
         <button type="submit" className="login-button">
-          Login
+         Login
         </button>
       </form>
       <p className="register-text">
-        Not register yet? <a href="/signup">Create Account</a>
+        Not registered yet? <a href="/signup">Create Account</a>
       </p>
     </div>
   );
